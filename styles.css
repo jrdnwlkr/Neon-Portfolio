@@ -1,0 +1,409 @@
+* {
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+:root {
+    --1000:black;
+    --900: #111827;
+    --800: #0b1018;
+    --700: #111a28;
+    --600: #6c757d;
+    --500: #6b7280;
+    --400: #9ca3af;
+    --300: #d1d5db;
+    --200: #f3f4f6;
+    --100: #ffffff;
+    --50: #2ca9a7;
+}
+
+body {
+    background-color: var(--1000);
+}
+
+header {
+    margin: 0px 24px;
+    margin-top: 0px;
+    padding: 32px 0px 32px 12px;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+}
+
+header div {
+    flex-grow: 2;
+    height: 80px;
+    line-height: 80px;
+}
+
+nav {
+    padding: 4px;
+}
+
+nav ul {
+    display: inline;
+    float: right;
+}
+
+nav li {
+    color: var(--100);
+    display: inline;
+    padding: 13px 20px;
+    margin: 0 8px; 
+    background-color: var(--800);
+    border: solid 1px var(--800);
+    border-radius: 4px;
+    font-size; .5rem;
+    border-bottom: solid 1px var(--700);
+    border-right: solid 1px var(--700);
+    border-top: solid 1px var(--400);
+    border-left: solid 1px var(--400);
+}
+
+nav li:hover {
+    border: solid 1px var(--800);
+    background-color: var(--900);
+    color: var(--900);
+}
+
+nav li a {
+    color: var(--50);
+    text-decoration: none;
+}
+
+nav li a:hover {
+    text-decoration: none;
+}
+
+main {
+    padding-bottom: 76px;
+}
+
+h1 {
+   font-size: 3rem;
+   color: var(--100);
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--100);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--100);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display:none;
+}
+
+.top {
+    background-color: var(--900);
+    height: 40px;
+    margin: 0px 24px 2px 24px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.hero {
+    display: block;
+    height: -webkit-fill-available;
+    overflow-y:auto;
+    background-size: cover;
+    background-color: var(--800);
+    margin: 0px 24px 2px 24px;
+    padding: 32px 32px;
+    border-radius: 0px;
+    display: flex;
+    flex-wrap: row wrap;
+    position: relative;
+}
+
+.hero div {
+ margin-right: 32px;
+}
+
+.hero img {
+    width: 100%;
+    margin-top: 24x;
+}
+
+.hero p {
+    margin-top: 20px 20px 0px 0px;
+    color: var(--500)
+}
+
+.hero pre {
+    background-color: var(--1000);
+    height: 44vh;
+}
+
+.hero a {
+    color: var(--50);
+    background-color: var(--1000);
+    text-decoration:none;
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding: 16px 16px;
+    left: 32px;
+    bottom: 32px;
+}
+
+.hero a:hover {
+    color: red;
+    text-decoration:none;
+    background-color: var(--1000);
+}
+
+.hero a:active {
+    color: var(--1000);
+    text-decoration:none;
+    background-color: red;
+}
+
+.hero:hover {
+    background-color: var(--900);
+}
+
+pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
+    padding: 12px;
+    color:var(--50);
+  }
+
+#container {
+    margin: 0 auto;
+    max-width: 80%;
+    display: block;
+    position: relative;
+    min-height: 100vh;
+}
+
+#contact {
+    padding-top: 15%;
+}
+
+.page {
+    background-color: var(--1000);
+    color: var(--100);
+    margin: 200px auto;
+    width: 80%
+}
+
+.cards {
+    margin: 2px 24px 2px 24px;
+    display: inline-flex;
+    background-color: var(--800);
+    padding: 12px 12px;
+    flex-flow: row wrap;
+    border-radius: 0px;
+}
+
+.card {
+    background-color: var(--900);
+    color: var(--900);
+    border: solid 1px var(--900);
+    padding: 20px 20px 20px 20px;
+    margin: 12px;
+    width: 30%
+    flex: 2 3 auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    background-color: var(--700);
+    border: solid 1px var(--50);
+    -webkit-box-shadow:0px 0px 16px 0px rgba(2,202,155,0.55);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(2,202,155,0.55);
+    box-shadow: 0px 0px 16px 0px rgba(2,202,155,0.55);
+}
+
+.card:hover h3 {
+    color: var(--50);
+}
+
+.card:active {
+    background-color: var(--900);
+    color: var(--400);
+}
+
+.card img {
+    width: 100%;
+}
+
+.link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+p {
+    font-size: 2rem;
+    word-wrap: break-word;
+    font-weight: 200;
+    border-radius: 0;
+    padding: 4px 0;
+    color: var(--600);
+    margin: 20px 40px 0 0;
+    margin-left: 0;
+    line-height: 36px;
+}
+
+.jrdnwlkr {
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+ footer {
+    background-color: var(--800);
+    color: var(--900);
+    margin: 0px;
+    padding: 24px 32px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+}
+
+@media screen and (min-width: 0px) {
+    #container {
+        max-width: 100%;   
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .hero pre {
+        height: 32%;
+        padding-bottom: 32px;
+    }
+
+    .cards {
+        padding: 0px;
+    }
+
+    .card {
+        flex-grow: 1;
+    }
+    .hero {
+        flex-flow: row wrap;
+    }
+    .hero div {
+        flex: 1 1 100%;
+    }
+
+    .hero a {
+        width: 100%;
+    }
+
+    footer h2 {
+        font-size: 1rem;
+        text-shadow: 1rem;
+    }
+  }
+
+
+@media screen and (min-width: 767px) {
+    #container {
+        max-width: 100%;
+        margin: 0px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 30px;
+        margin-bottom: 0px;
+    }
+
+    .hero pre {
+        padding-bottom: 32px;
+    }
+
+    .hero a {
+        width: 100%;
+    }
+
+    .cards {
+        padding: 0px;
+    }
+
+    .card {
+        flex: 1;
+    }
+
+    .hero {
+        display: flex;
+    }
+
+    .hero div {
+        flex: 1 2 100%;
+        flex-flow: row wrap;
+    }
+
+    footer h2 {
+        font-size: 1rem;
+        color: var(--50);
+        font-weight: 300;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    #container {
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .card {
+        flex: 1 1 30%;
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+  }
+
+  .hero div {
+    flex: 1 1 44%;
+}
+
+  @media screen and (min-width: 1440px) {
+    #container {
+        width: 100%;
+    }
+
+    .card {
+        flex-grow: 1;
+    }
+
+    .hero div {
+        flex: 1 1 44%;
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+  }
