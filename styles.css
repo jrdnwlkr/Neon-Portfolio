@@ -34,45 +34,6 @@ header div {
     line-height: 80px;
 }
 
-nav {
-    padding: 4px;
-}
-
-nav ul {
-    display: inline;
-    float: right;
-}
-
-nav li {
-    color: var(--100);
-    display: inline;
-    padding: 13px 20px;
-    margin: 0 8px; 
-    background-color: var(--800);
-    border: solid 1px var(--800);
-    border-radius: 4px;
-    font-size; .5rem;
-    border-bottom: solid 1px var(--700);
-    border-right: solid 1px var(--700);
-    border-top: solid 1px var(--400);
-    border-left: solid 1px var(--400);
-}
-
-nav li:hover {
-    border: solid 1px var(--800);
-    background-color: var(--900);
-    color: var(--900);
-}
-
-nav li a {
-    color: var(--50);
-    text-decoration: none;
-}
-
-nav li a:hover {
-    text-decoration: none;
-}
-
 main {
     padding-bottom: 76px;
 }
@@ -95,75 +56,43 @@ h3 {
     margin-bottom: 20px;
 }
 
-.hidden {
-    display:none;
+p {
+    font-family: monospace;
 }
 
-.top {
+.intro {
+    margin-bottom: 0px;
+    height: 100vh;
+    position: relative;
+    padding: 0 50px;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.intro a {
+    font-family: monospace;
+    text-decoration: none;
+    font-size: 3rem;
+    color: var(--50);
+    padding: 20px;
+    margin: 40px 0px;
+}
+
+.intro a:hover {
+    text-decoration: underline;
+}
+
+.intro .avatar {
+    position: fixed;
+    bottom: 0;
+    width: 30%;
+}
+
+#projects {
     background-color: var(--900);
     height: 40px;
     margin: 0px 24px 2px 24px;
     border-radius: 8px 8px 0px 0px;
-}
-
-.hero {
-    display: block;
-    height: -webkit-fill-available;
-    overflow-y:auto;
-    background-size: cover;
-    background-color: var(--800);
-    margin: 0px 24px 2px 24px;
-    padding: 32px 32px;
-    border-radius: 0px;
-    display: flex;
-    flex-wrap: row wrap;
-    position: relative;
-}
-
-.hero div {
- margin-right: 32px;
-}
-
-.hero img {
-    width: 100%;
-    margin-top: 24x;
-}
-
-.hero p {
-    margin-top: 20px 20px 0px 0px;
-    color: var(--500)
-}
-
-.hero pre {
-    background-color: var(--1000);
-    height: 44vh;
-}
-
-.hero a {
-    color: var(--50);
-    background-color: var(--1000);
-    text-decoration:none;
-    font-weight: 500;
-    font-size: 1.25rem;
-    padding: 16px 16px;
-    left: 32px;
-    bottom: 32px;
-}
-
-.hero a:hover {
-    color: red;
-    text-decoration:none;
-    background-color: var(--1000);
-}
-
-.hero a:active {
-    color: var(--1000);
-    text-decoration:none;
-    background-color: red;
-}
-
-.hero:hover {
-    background-color: var(--900);
 }
 
 pre {
@@ -184,14 +113,22 @@ pre {
 }
 
 #contact {
-    padding-top: 15%;
-}
-
-.page {
+    padding: 15%;
     background-color: var(--1000);
     color: var(--100);
     margin: 200px auto;
     width: 80%
+}
+
+#contact a {
+    font-family: monospace;
+    text-decoration: none;
+    color: var(--50);
+    margin: 40px 0px;
+}
+
+#contact a:hover {
+    text-decoration:underline;
 }
 
 .cards {
@@ -210,9 +147,13 @@ pre {
     padding: 20px 20px 20px 20px;
     margin: 12px;
     width: 30%
-    flex: 2 3 auto;
+    flex: 1 1 auto;
     cursor: pointer;
     position: relative;
+}
+
+.card:first-child {
+    flex: 2 2 auto;
 }
 
 .card:hover {
@@ -234,27 +175,6 @@ pre {
 
 .card img {
     width: 100%;
-}
-
-.link {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-
-p {
-    font-size: 2rem;
-    word-wrap: break-word;
-    font-weight: 200;
-    border-radius: 0;
-    padding: 4px 0;
-    color: var(--600);
-    margin: 20px 40px 0 0;
-    margin-left: 0;
-    line-height: 36px;
 }
 
 .jrdnwlkr {
@@ -318,6 +238,15 @@ p {
     }
   }
 
+@media screen and (min-width: 367px) {
+    .intro a {
+        font-size: 2rem;
+}
+
+    #contact {
+        left-padding: 50%;
+    }
+
 
 @media screen and (min-width: 767px) {
     #container {
@@ -335,12 +264,8 @@ p {
         margin-bottom: 0px;
     }
 
-    .hero pre {
-        padding-bottom: 32px;
-    }
-
-    .hero a {
-        width: 100%;
+    .intro a {
+        font-size: 2rem;
     }
 
     .cards {
@@ -349,10 +274,6 @@ p {
 
     .card {
         flex: 1;
-    }
-
-    .hero {
-        display: flex;
     }
 
     .hero div {
@@ -373,6 +294,10 @@ p {
         flex-grow: 1;
     }
 
+    .intro a {
+        font-size: 3rem;
+    }
+
     .card {
         flex: 1 1 30%;
     }
@@ -384,10 +309,6 @@ p {
     }
   }
 
-  .hero div {
-    flex: 1 1 44%;
-}
-
   @media screen and (min-width: 1440px) {
     #container {
         width: 100%;
@@ -395,10 +316,6 @@ p {
 
     .card {
         flex-grow: 1;
-    }
-
-    .hero div {
-        flex: 1 1 44%;
     }
 
     p {
